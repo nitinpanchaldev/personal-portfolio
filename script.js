@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* ==========================================================================
-       1. MOBILE NAVIGATION TOGGLE
-       ========================================================================== */
+   
     const navToggle = document.getElementById('navToggle');
     const primaryNav = document.getElementById('primaryNav');
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -13,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navToggle.setAttribute('aria-expanded', !isExpanded);
             primaryNav.classList.toggle('open');
 
-            // Toggle icon between bars and X mark
             const icon = navToggle.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
@@ -21,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close mobile nav when clicking any link
+        
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (primaryNav.classList.contains('open')) {
@@ -37,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ==========================================================================
-       2. ACTIVE NAV LINK ON SCROLL (Observer)
-       ========================================================================== */
+  
     const sections = document.querySelectorAll('section[id]');
 
     const observerOptions = {
@@ -64,17 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => sectionObserver.observe(section));
 
-    /* ==========================================================================
-       3. DYNAMIC FOOTER YEAR
-       ========================================================================== */
+   
     const yearElement = document.getElementById('year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
 
-    /* ==========================================================================
-       4. CONTACT FORM HANDLING
-       ========================================================================== */
+ 
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
@@ -118,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.textContent = originalBtnText;
                 submitBtn.disabled = false;
 
-                // Auto clear status message after 5 seconds
+              
                 setTimeout(() => {
                     formStatus.textContent = '';
                     formStatus.removeAttribute('data-state');
