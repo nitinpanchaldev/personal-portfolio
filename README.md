@@ -5,7 +5,7 @@ A modern, responsive, and professional personal portfolio website built to showc
 ## 🌐 Live Demo
 
 **Portfolio Website:**
-https://nitinpanchaldev.github.io/portfolio/
+https://nitinpanchaldev.github.io/personal-portfolio/
 
 ## 👨‍💻 About
 
